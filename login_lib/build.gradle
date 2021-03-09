@@ -1,6 +1,15 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'com.novoda.bintray-release'
+}
+publish {
+    userOrg = 'jixiaoxin-5844'
+    groupId = 'com.hyt.login_lib'
+    artifactId = 'login-release'
+    publishVersion = '1.0.0'
+    desc = 'Android login_lib'
+    website = 'https://github.com/jixiaoxin-5844/Login_lib'
 }
 
 android {
@@ -32,6 +41,7 @@ android {
     }
 }
 
+
 dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -42,3 +52,12 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
+
+/*publish {
+    userOrg = 'jixiaoxin-5844'               //用户名
+    groupId = 'com.hyt.login_lib'           //仓库名
+    artifactId = 'login-release'   //id
+    publishVersion = '1.0.0'         //版本
+    desc = 'Android login_lib'  //描述
+    website = 'https://github.com/jixiaoxin-5844/Login_lib'           //地址，填写真实可访问地址
+}*/
